@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  ijkplayerDemo
+//
+//  Created by Yang on 16/12/12.
+//  Copyright © 2016年 wanglei. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIImageView+WebCache.h"
+
+#define RGBColor(a,b,c,t) [UIColor colorWithRed:a/255.f green:b/255.f blue:c/255.f alpha:t]
+#define RandomColor RGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255), (arc4random_uniform(255)/255.f))
+
+#define USER_DEFAULT  [NSUserDefaults standardUserDefaults]
+
+#define APP_DELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+#define WeakSelf __weak typeof(self) weakSelf = self;
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HIGHT [UIScreen mainScreen].bounds.size.height
+
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+
+//数组是否为空
+#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+
+//字典是否为空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNu
+
+#endif /* PrefixHeader_pch */
